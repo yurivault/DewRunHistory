@@ -3,7 +3,7 @@
 A mod for [Shape of Dreams](https://store.steampowered.com/app/2444750/) that lets you
 browse your past runs on the game's own end-of-run result screen, from the title menu.
 
-![Run History](about/preview.png)
+![Run History](media/01-overview.png)
 
 ## Why
 
@@ -22,6 +22,15 @@ the same layout, the same stat bars and the same tooltips on skills, memories an
 
 Gameplay is untouched. Nothing is sent over the network, and the window can only open
 outside a match, since during a run the game already shows you everything.
+
+Worth knowing: Steam cross-play switches off while any mod is active. That's the game's
+rule (`LobbyServiceEOS.IsCrossPlayEligible` reads `DewMod.isAnyModActive`), not this mod's,
+and it applies to every mod on the Workshop. The MOD badge on a lobby is a different flag,
+`isGameplayAltered`, which this mod does not set.
+
+| Every run you've played | The game's real tooltips |
+|---|---|
+| ![run list](media/03-run-list.png) | ![tooltip](media/02-tooltip.png) |
 
 Runs land in:
 
