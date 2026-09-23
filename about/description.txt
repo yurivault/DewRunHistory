@@ -1,0 +1,25 @@
+Browse your past runs on the game's own end-of-run result screen, from the title menu.
+
+The game keeps your last 20 results and overwrites the rest. This mod archives every run
+to disk as it finishes, so your history keeps going past that cap, and it reuses the real
+result screen to show them. Same layout, same stat bars, same tooltips on skills, memories
+and gems. Nothing is redrawn or approximated.
+
+What you get:
+- "Run History" entry in the title menu
+- a scrollable list of every archived run, with date, result, length, players and difficulty
+- click a run to open it, arrows to switch between players in that run
+- hover anything for the same tooltip you get at the end of a match
+- very short runs and quick abandons are filtered out, the header says how many are hidden
+
+Does not change gameplay. No new items, no balance changes, nothing sent over the network.
+It only reads results the game already saved, and the window can only be opened outside a
+match. Runs are archived under:
+
+  %USERPROFILE%\AppData\LocalLow\Lizard Smoothie\Shape of Dreams\RunHistory\
+
+One caveat: archiving starts when you install the mod. Runs you played before that are
+imported from the game's own last-20 list, so you keep what the game still remembers, but
+anything already overwritten is gone and there's no way to get it back.
+
+Source: https://github.com/yurivault/DewRunHistory

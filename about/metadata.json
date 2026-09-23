@@ -1,0 +1,9 @@
+{
+  "id": "com.yuri.DewRunHistory",
+  "name": "Run History",
+  "author": "Yuri",
+  "modVer": "1.0.0",
+  "assemblies": [
+    "bin/Release/DewRunHistory.dll"
+  ]
+}

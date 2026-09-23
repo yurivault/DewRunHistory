@@ -1,0 +1,10 @@
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# deliberately out of the repo. the game's UploadMod READS this file and, if it exists,
+# UPDATES that workshop item instead of creating a new one. committed, anyone who cloned
+# and hit upload would overwrite my item.
+about/publishedfileid.txt
