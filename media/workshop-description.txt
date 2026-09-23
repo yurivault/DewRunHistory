@@ -1,0 +1,62 @@
+TITLE (paste into the item title field):
+Run History - Browse Past Runs and Builds
+
+TAGS to tick: Tools, Client-side, Tweaks
+(do NOT tick Gameplay or Cheats, this mod changes neither)
+
+=========================================================
+DESCRIPTION (paste everything below this line into the description box)
+=========================================================
+
+[h1]Run History[/h1]
+Look at your old runs on the game's own result screen, straight from the title menu.
+
+[hr][/hr]
+
+[h2]The problem[/h2]
+Shape of Dreams keeps your last 20 results and quietly overwrites everything older. Worse, once you click past the end-of-run screen, that's it. There's no way back to it.
+
+So everyone ends up doing the same thing. Screenshot the build, and hope you can still read which gems went where.
+
+[h2]What this does[/h2]
+Every run gets written to disk the moment it ends, so your history keeps growing well past the 20 the game holds on to. Then it clones the real result screen to show them back.
+
+Not a rebuilt panel. Not an approximation. The actual screen, with the actual stat bars and the actual tooltips.
+
+[list]
+[*] A [b]Run History[/b] entry in the title menu, where you'd expect it
+[*] Scrollable list of every archived run: date, result, length, player count, difficulty
+[*] Click a run to open it, arrows switch between players in that run
+[*] Hover any memory, skill or gem for the same tooltip you get at the end of a match
+[*] Very short runs and quick abandons are filtered out, and the header says how many it hid
+[/list]
+
+[h2]Is it safe to run?[/h2]
+[list]
+[*] [b]No gameplay changes.[/b] It only reads results the game already saved.
+[*] [b]No MOD badge on your lobby.[/b] That badge comes from isGameplayAltered, and this mod doesn't set it.
+[*] [b]Nothing goes over the network.[/b] It reads local files and draws a window.
+[*] [b]It won't open during a match.[/b] While you're playing, the game already shows you all of this.
+[/list]
+
+One thing I'll be upfront about, because most listings skip it: [b]Steam cross-play switches off while any mod is active.[/b] That's the game's own rule, not something this mod does, and it applies to every item on this Workshop. If you and your friends are all on Steam, you won't notice.
+
+[h2]Read this before you install[/h2]
+Archiving starts the moment you install. On the first launch it imports whatever the game still remembers, so you keep those last 20. Anything already overwritten before that is gone, and there's no getting it back.
+
+Which is to say: install it before your next good run, not after it.
+
+Your runs live here, one JSON file each:
+[code]%USERPROFILE%\AppData\LocalLow\Lizard Smoothie\Shape of Dreams\RunHistory\[/code]
+
+They're plain text and they're yours. Uninstalling the mod doesn't delete them.
+
+[h2]Source[/h2]
+MIT licensed, all of it is on GitHub:
+[url=https://github.com/yurivault/DewRunHistory]github.com/yurivault/DewRunHistory[/url]
+
+The README has notes on the parts of this game's UI that fought back, in case you're writing a mod of your own and hit the same walls.
+
+[hr][/hr]
+
+If something looks off, leave a comment saying what you did and I'll take a look. Honestly, a good bug report is worth more to me than a star.

@@ -61,9 +61,13 @@ internal static class RunListPanel
             hrt.anchorMin = new Vector2(0f, 1f);
             hrt.anchorMax = new Vector2(1f, 1f);
             hrt.pivot = new Vector2(0.5f, 1f);
-            hrt.offsetMin = new Vector2(16f, -86f);
+            hrt.offsetMin = new Vector2(16f, -100f);
             hrt.offsetMax = new Vector2(-58f, -10f);
             _header = Label(head, 22f, TextAlignmentOptions.TopLeft, new Color(0.85f, 0.88f, 1f));
+            // the counts used to ride on the title line and got cut off at "18 short runs hidd".
+            // they get their own line now, and the header is the one label allowed to wrap.
+            _header.textWrappingMode = TextWrappingModes.Normal;
+            _header.overflowMode = TextOverflowModes.Overflow;
 
             CreateCloseButton();
 
@@ -203,8 +207,9 @@ internal static class RunListPanel
 
             if (_header != null)
             {
-                string extra = hidden > 0 ? $"   <size=13>({hidden} short runs hidden)</size>" : "";
-                _header.text = $"<b>Run History</b>   <size=16><color=#9AA6C4>{runs.Count} runs{extra}</color></size>\n" +
+                string extra = hidden > 0 ? $"   -   {hidden} short hidden" : "";
+                _header.text = $"<b>Run History</b>\n" +
+                               $"<size=14><color=#9AA6C4>{runs.Count} runs{extra}</color></size>\n" +
                                "<size=14><color=#9AA6C4>Click a run to open   -   arrows switch player</color></size>";
             }
         }
